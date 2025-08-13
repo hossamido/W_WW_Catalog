@@ -61,7 +61,7 @@ def load_service_data(file_path):
 def create_partnership_graph(df, central_node_name, filter_type):
     """Generates an interactive network graph of partnerships."""
     # Initialize the graph with a light background
-    net = Network(height='600px', width='100%', bgcolor='#f0f2f6', font_color='black', notebook=True, cdn_resources='in_line')
+    net = Network(height='350px', width='75%', bgcolor='#f0f2f6', font_color='black', notebook=True, cdn_resources='in_line')
 
     # Set physics layout for a more spread-out, readable graph
     net.set_options("""
@@ -106,7 +106,7 @@ def create_partnership_graph(df, central_node_name, filter_type):
 
 def create_full_bipartite_graph(df):
     """Generates an interactive bipartite-style network graph for the entire dataset."""
-    net = Network(height='750px', width='100%', bgcolor='#f0f2f6', font_color='black', notebook=True, cdn_resources='in_line', directed=False)
+    net = Network(height='600px', width='100%', bgcolor='#f0f2f6', font_color='black', notebook=True, cdn_resources='in_line', directed=False)
 
     # Set physics for a force-directed layout which works well for bipartite graphs
     net.set_options("""
@@ -156,6 +156,7 @@ st.set_page_config(layout="wide", page_title="OT Security Partnerships Explorer"
 # --- Main Sidebar Selection ---
 st.sidebar.title("OT Security Catalog")
 st.sidebar.markdown("Created by **Hossam**")
+st.sidebar.markdown("Aug 13, 2025")
 explorer_choice = st.sidebar.radio(
     "Select an explorer:",
     ('Partnerships', 'Security Services')
@@ -187,7 +188,7 @@ if explorer_choice == 'Partnerships':
         st.markdown("This graph shows all automation companies (boxes) and security providers (circles) with partnerships relevant to the water sector. Hover over an edge to see details, and drag nodes to rearrange the layout.")
         graph_html = create_full_bipartite_graph(df)
         if graph_html:
-            components.html(graph_html, height=800)
+            components.html(graph_html, height=620)
     else:
         st.sidebar.header("Filter Options")
         filter_by = st.sidebar.radio("Filter by:", ('Security Provider', 'Automation Company'), key='filter_type')
@@ -226,7 +227,7 @@ if explorer_choice == 'Partnerships':
             st.markdown("An interactive graph showing the selected company and its direct partners. Hover over an edge for details, and drag nodes to rearrange the layout.")
             graph_html = create_partnership_graph(filtered_df, central_node, filter_by)
             if graph_html:
-                components.html(graph_html, height=620)
+                components.html(graph_html, height=470)
 
 elif explorer_choice == 'Security Services':
     # --- Security Services Explorer Logic ---
