@@ -1,0 +1,9 @@
+Security service,Who provides it,PERA layer(s),Regulation / guidance alignment
+Asset inventory,"Dragos, Nozomi Networks, Tenable OT Security",Collection L1–L3; repository L3/L4,EPA Top 8 (#4 Inventory OT/IT assets); CISA CPG (Asset Inventory); NIST CSF 2.0: IDENTIFY; AWIA RRA inputs
+IR/Playbooks,"Dragos, Waterfall Security",Sensors L2–L3; SOC & process at L4 (program),EPA Top 8 (#5 Develop & exercise IR/Recovery); CISA CPG (Incident Response); NIST CSF 2.0: RESPOND; AWIA ERP requirement
+MDR (managed detection & response),Dragos,Sensors L2–L3; SOC L4 (24/7),EPA Checklist (monitoring/response); CISA CPG (Detection & Response); NIST CSF 2.0: DETECT/RESPOND; AWIA ERP support
+NIDS,Tenable OT Security,L2–L3 taps/sensors; console L3/L3.5,EPA 2024 Checklist (monitoring); CISA CPG (Monitoring/Detection); NIST CSF 2.0: DETECT; AWIA RRA/ERP support
+OT monitoring/detection,"Claroty, Dragos, Nozomi Networks",L2–L3 sensors/collectors; console L3/L3.5 (DMZ),EPA 2024 Checklist (monitoring & alerting); CISA CPG (Monitoring/Detection); NIST CSF 2.0: DETECT; AWIA RRA/ERP (detection/response)
+Unidirectional gateway,Waterfall Security,One-way OT→IT at L3.5 → L4,EPA Top 8 (#1 Reduce internet exposure); EPA Checklist (secure OT–IT boundary); NIST CSF 2.0: PROTECT (Protective Technology)
+Vulnerability management,"Nozomi Networks, Tenable OT Security",Data from L1–L3; analytics/reports at L3–L4,EPA Top 8 (#7 Reduce exposure to known vulnerabilities); CISA CPG (Vuln Mgmt); NIST CSF 2.0: IDENTIFY/PROTECT; AWIA RRA/ERP mitigation
+Zero-trust remote access,"Claroty, Zscaler",Broker at L3.5; policy/IdP at L4; targets L3/L2,"EPA Top 8 (#1 Reduce internet exposure; MFA in Checklist); CISA CPG (Remote Access, IAM); NIST CSF 2.0: PROTECT (Access)"
