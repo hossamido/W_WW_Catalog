@@ -61,7 +61,7 @@ def load_service_data(file_path):
 def create_partnership_graph(df, central_node_name, filter_type):
     """Generates an interactive network graph of partnerships."""
     # Initialize the graph with a light background
-    net = Network(height='350px', width='75%', bgcolor='#f0f2f6', font_color='black', notebook=True, cdn_resources='in_line')
+    net = Network(height='450px', width='100%', bgcolor='#f0f2f6', font_color='black', notebook=True, cdn_resources='in_line')
 
     # Set physics layout for a more spread-out, readable graph
     net.set_options("""
@@ -106,7 +106,7 @@ def create_partnership_graph(df, central_node_name, filter_type):
 
 def create_full_bipartite_graph(df):
     """Generates an interactive bipartite-style network graph for the entire dataset."""
-    net = Network(height='600px', width='100%', bgcolor='#f0f2f6', font_color='black', notebook=True, cdn_resources='in_line', directed=False)
+    net = Network(height='300px', width='400px', bgcolor='#f0f2f6', font_color='black', notebook=True, cdn_resources='in_line', directed=False)
 
     # Set physics for a force-directed layout which works well for bipartite graphs
     net.set_options("""
@@ -155,8 +155,8 @@ st.set_page_config(layout="wide", page_title="OT Security Partnerships Explorer"
 
 # --- Main Sidebar Selection ---
 st.sidebar.title("OT Security Catalog")
-st.sidebar.markdown("Created by **Hossam**")
-st.sidebar.markdown("Aug 13, 2025")
+st.sidebar.markdown("Created by: **Ahmed Hemida**")
+st.sidebar.markdown("On Aug 13, 2025")
 explorer_choice = st.sidebar.radio(
     "Select an explorer:",
     ('Partnerships', 'Security Services')
