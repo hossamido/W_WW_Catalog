@@ -155,7 +155,7 @@ st.set_page_config(layout="wide", page_title="OT Security Partnerships Explorer"
 
 # --- Main Sidebar Selection ---
 st.sidebar.title("OT Security Catalog")
-st.sidebar.markdown("Created by: **Ahmed Hemida**")
+st.sidebar.markdown("### Created by: **Ahmed Hemida**")
 st.sidebar.markdown("On Aug 13, 2025")
 explorer_choice = st.sidebar.radio(
     "Select an explorer:",
