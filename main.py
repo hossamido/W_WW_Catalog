@@ -89,6 +89,51 @@ def create_partnership_graph(df, central_node_name, filter_type):
         st.error(f"Could not generate graph: {e}")
         return None
 
+def create_full_bipartite_graph(df):
+    """Generates an interactive bipartite-style network graph for the entire dataset."""
+    net = Network(height='750px', width='100%', bgcolor='#f0f2f6', font_color='black', notebook=True, cdn_resources='in_line', directed=False)
+
+    # Set physics for a force-directed layout which works well for bipartite graphs
+    net.set_options("""
+    var options = {
+      "physics": {
+        "forceAtlas2Based": {
+          "gravitationalConstant": -100,
+          "centralGravity": 0.01,
+          "springLength": 200,
+          "springConstant": 0.08,
+          "avoidOverlap": 1
+        },
+        "minVelocity": 0.75,
+        "solver": "forceAtlas2Based"
+      }
+    }
+    """)
+
+    # Get unique nodes for each partition
+    automation_nodes = df['automation_company'].unique()
+    security_nodes = df['security_provider'].unique()
+
+    # Add nodes with distinct styles
+    for node in automation_nodes:
+        net.add_node(node, label=node, color='#1f77b4', shape='box', size=25, title='Automation Company')
+    for node in security_nodes:
+        net.add_node(node, label=node, color='#2ca02c', shape='dot', size=25, title='Security Provider')
+
+    # Add edges from the dataframe
+    for _, row in df.iterrows():
+        edge_title = f"Solution: {row['marketed_solution']}<br>Type: {row['partnership_type']}"
+        net.add_edge(row['automation_company'], row['security_provider'], title=edge_title)
+
+    try:
+        file_name = '/tmp/full_partnership_graph.html'
+        net.save_graph(file_name)
+        with open(file_name, 'r', encoding='utf-8') as html_file:
+            return html_file.read()
+    except Exception as e:
+        st.error(f"Could not generate full graph: {e}")
+        return None
+
 # --- Streamlit App ---
 
 st.set_page_config(layout="wide", page_title="OT Security Partnerships Explorer")
@@ -100,7 +145,7 @@ dataset_choice = st.sidebar.radio(
     ('Comprehensive View', 'Water Utilities Focus')
 )
 
-# Load data and set title based on choice
+# --- Data Loading and Page Title ---
 if dataset_choice == 'Water Utilities Focus':
     df = load_data(WATER_DATA_PATH, is_water_data=True)
     st.title("Water Utilities OT Security Partnerships Explorer")
@@ -110,53 +155,59 @@ else: # 'Comprehensive View'
     st.title("Comprehensive OT Security Partnerships Explorer")
     st.markdown("This view shows all known partnerships between major automation vendors and OT security providers.")
 
-st.sidebar.header("Filter Options")
+# --- View Mode Selection (and Main Content Rendering) ---
+view_mode = "By Company" # Default view
+if dataset_choice == 'Water Utilities Focus':
+    view_mode = st.sidebar.radio("View Mode", ("By Company", "Full Network"), key='water_view_mode')
 
-# --- Sidebar Filters ---
-filter_by = st.sidebar.radio(
-    "Filter by:",
-    ('Security Provider', 'Automation Company'),
-    key='filter_type' # Add a key to avoid state issues
-)
-
-filtered_df = pd.DataFrame() # Initialize an empty dataframe
-central_node = None
-
-if filter_by == 'Security Provider':
-    providers = sorted(df['security_provider'].unique())
-    selected_provider = st.sidebar.selectbox("Select a Security Provider", providers, key='provider_select')
-    central_node = selected_provider
-    st.header(f"Automation companies partnering with: {central_node}")
-    filtered_df = df[df['security_provider'] == central_node]
-
-elif filter_by == 'Automation Company':
-    companies = sorted(df['automation_company'].unique())
-    selected_company = st.sidebar.selectbox("Select an Automation Company", companies, key='company_select')
-    central_node = selected_company
-    st.header(f"Security providers partnering with: {central_node}")
-    filtered_df = df[df['automation_company'] == central_node]
-
-# --- Display Results ---
-if filtered_df.empty or not central_node:
-    st.info("Select a filter from the sidebar to see partnership details.")
-else:
-    for _, row in filtered_df.iterrows():
-        with st.expander(f"**{row['automation_company']} & {row['security_provider']}**"):
-            st.markdown(f"#### {row['marketed_solution']}")
-            st.markdown(f"**Partnership Type:** {row['partnership_type']}")
-            st.markdown(f"**Services Offered:** {row['services_offered']}")
-            st.markdown(f"**Relevant Sectors:** {row['sectors']}")
-            
-            # Conditionally display service tags if the column exists and has data
-            if 'service_tags' in df.columns and isinstance(row['service_tags'], list) and row['service_tags']:
-                st.markdown(f"**Service Tags:** `{'`, `'.join(row['service_tags'])}`")
-
-            st.markdown(f"**Source:** [Link]({row['sources']})")
-
-    # --- Display Network Graph ---
-    st.subheader("Partnership Network Graph")
-    st.markdown("An interactive graph showing the selected company and its direct partners. Hover over an edge for details, and drag nodes to rearrange the layout.")
-    
-    graph_html = create_partnership_graph(filtered_df, central_node, filter_by)
+if view_mode == "Full Network":
+    st.header("Full Partnership Network (Water & Wastewater Focus)")
+    st.markdown("This graph shows all automation companies (boxes) and security providers (circles) with partnerships relevant to the water sector. Hover over an edge to see details, and drag nodes to rearrange the layout.")
+    graph_html = create_full_bipartite_graph(df)
     if graph_html:
-        components.html(graph_html, height=620)
+        components.html(graph_html, height=800)
+else:
+    # "By Company" view for both datasets
+    st.sidebar.header("Filter Options")
+    filter_by = st.sidebar.radio(
+        "Filter by:",
+        ('Security Provider', 'Automation Company'),
+        key='filter_type'
+    )
+
+    filtered_df = pd.DataFrame()
+    central_node = None
+
+    if filter_by == 'Security Provider':
+        providers = sorted(df['security_provider'].unique())
+        selected_provider = st.sidebar.selectbox("Select a Security Provider", providers, key='provider_select')
+        central_node = selected_provider
+        st.header(f"Automation companies partnering with: {central_node}")
+        filtered_df = df[df['security_provider'] == central_node]
+
+    elif filter_by == 'Automation Company':
+        companies = sorted(df['automation_company'].unique())
+        selected_company = st.sidebar.selectbox("Select an Automation Company", companies, key='company_select')
+        central_node = selected_company
+        st.header(f"Security providers partnering with: {central_node}")
+        filtered_df = df[df['automation_company'] == central_node]
+
+    # --- Display Results ---
+    if filtered_df.empty or not central_node:
+        st.info("Select a filter from the sidebar to see partnership details.")
+    else:
+        for _, row in filtered_df.iterrows():
+            with st.expander(f"**{row['automation_company']} & {row['security_provider']}**"):
+                st.markdown(f"#### {row['marketed_solution']}")
+                st.markdown(f"**Partnership Type:** {row['partnership_type']}")
+                st.markdown(f"**Services Offered:** {row['services_offered']}")
+                st.markdown(f"**Relevant Sectors:** {row['sectors']}")
+                if 'service_tags' in df.columns and isinstance(row['service_tags'], list) and row['service_tags']:
+                    st.markdown(f"**Service Tags:** `{'`, `'.join(row['service_tags'])}`")
+                st.markdown(f"**Source:** [Link]({row['sources']})")
+
+        st.subheader("Partnership Network Graph")
+        st.markdown("An interactive graph showing the selected company and its direct partners. Hover over an edge for details, and drag nodes to rearrange the layout.")
+        graph_html = create_partnership_graph(filtered_df, central_node, filter_by)
+        if graph_html:
+            components.html(graph_html, height=620)
