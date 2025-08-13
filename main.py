@@ -155,6 +155,7 @@ st.set_page_config(layout="wide", page_title="OT Security Partnerships Explorer"
 
 # --- Main Sidebar Selection ---
 st.sidebar.title("OT Security Catalog")
+st.sidebar.markdown("Created by **Hossam**")
 explorer_choice = st.sidebar.radio(
     "Select an explorer:",
     ('Partnerships', 'Security Services')
