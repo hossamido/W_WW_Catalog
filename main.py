@@ -5,8 +5,8 @@ from pyvis.network import Network
 import streamlit.components.v1 as components
 
 # Define paths for the datasets
-WATER_DATA_PATH = '/home/hossamido/Downloads/water partners/Water_Utilities-focused_partnerships.csv'
-ALL_DATA_PATH = '/home/hossamido/Downloads/water partners/ot_partnerships_relations.csv'
+WATER_DATA_PATH = 'Water_Utilities-focused_partnerships.csv'
+ALL_DATA_PATH = 'ot_partnerships_relations.csv'
 
 @st.cache_data
 def load_data(file_path, is_water_data=False):
