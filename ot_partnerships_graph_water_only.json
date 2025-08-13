@@ -1,0 +1,129 @@
+{
+  "ABB": [
+    {
+      "provider": "Microsoft (Azure/Defender ecosystem)",
+      "partnership_type": "Strategic collaboration",
+      "service_tags": [],
+      "marketed_solution": "ABB Ability platform on Azure; security whitepaper with Microsoft/NXP",
+      "sources": [
+        "https://azure.microsoft.com/mediahandler/files/resourcefiles/-a-solution-for-360-degree-industrial-internet-security/ABB-MSFT-NXP_Cybersecurity%20Whitepaper_2021.pdf"
+      ]
+    }
+  ],
+  "Emerson": [
+    {
+      "provider": "Dragos",
+      "partnership_type": "Expanded global agreement",
+      "service_tags": [
+        "OT monitoring/detection"
+      ],
+      "marketed_solution": "Ovation Power & Water Cybersecurity Suite; validated on DeltaV",
+      "sources": [
+        "https://www.emerson.com/en-us/news/automation/1907-dragos"
+      ]
+    },
+    {
+      "provider": "Nozomi Networks",
+      "partnership_type": "Expanded partnership",
+      "service_tags": [
+        "OT monitoring/detection"
+      ],
+      "marketed_solution": "Offered via Emerson Power and Water Cybersecurity suite",
+      "sources": [
+        "https://www.nozominetworks.com/press-release/emerson-and-nozomi-networks-extend-relationship-to-help-secure-critical-power-and-water-processes-worldwide"
+      ]
+    }
+  ],
+  "GE (Digital/Power/Vernova)": [
+    {
+      "provider": "Nozomi Networks",
+      "partnership_type": "Global partnership",
+      "service_tags": [
+        "OT monitoring/detection"
+      ],
+      "marketed_solution": "GE Power customer deployments; Proficy integration by partners",
+      "sources": [
+        "https://www.nozominetworks.com/press-release/ge-and-nozomi-networks-to-enhance-cyber-security-for-energy-and-industrial-operators-worldwide"
+      ]
+    }
+  ],
+  "Honeywell": [
+    {
+      "provider": "Nozomi Networks",
+      "partnership_type": "Cybersecurity partnership",
+      "service_tags": [
+        "OT monitoring/detection"
+      ],
+      "marketed_solution": "Honeywell Forge Cybersecurity+ with Nozomi",
+      "sources": [
+        "https://www.honeywell.com/us/en/press/2020/11/honeywell-and-nozomi-networks-announce-partnership-to-significantly-strengthen-operational-technology-cybersecurity"
+      ]
+    }
+  ],
+  "Siemens": [
+    {
+      "provider": "Fortinet",
+      "partnership_type": "Technology alliance",
+      "service_tags": [
+        "Network security/segmentation"
+      ],
+      "marketed_solution": "FortiGate VM on Siemens RUGGEDCOM/APE platform",
+      "sources": [
+        "https://www.fortinet.com/content/dam/fortinet/assets/alliances/2019/sb-fortinet-alliances-siemens.pdf"
+      ]
+    }
+  ],
+  "Siemens Energy": [
+    {
+      "provider": "Tenable",
+      "partnership_type": "Expanded collaboration; product integration",
+      "service_tags": [
+        "Asset inventory",
+        "NIDS",
+        "Vulnerability management"
+      ],
+      "marketed_solution": "Integrated into Omnivise T3000 control system",
+      "sources": [
+        "https://www.tenable.com/press-releases/tenable-and-siemens-energy-expand-collaboration-on-ot-cybersecurity"
+      ]
+    }
+  ],
+  "Yokogawa": [
+    {
+      "provider": "Dragos",
+      "partnership_type": "Global partnership; technology & services integration",
+      "service_tags": [
+        "Asset inventory",
+        "IR/Playbooks",
+        "OT monitoring/detection",
+        "Vulnerability management"
+      ],
+      "marketed_solution": "Integration with CENTUM VP DCS; joint OT services",
+      "sources": [
+        "https://www.dragos.com/resources/press-release/dragos-and-yokogawa-forge-global-partnership-to-strengthen-cybersecurity-for-industrial-systems-worldwide/"
+      ]
+    },
+    {
+      "provider": "Nozomi Networks",
+      "partnership_type": "MSSP/resell & services partnership (extended)",
+      "service_tags": [
+        "OT monitoring/detection"
+      ],
+      "marketed_solution": "Included in Yokogawa OpreX Managed Services; standalone resale",
+      "sources": [
+        "https://www.nozominetworks.com/press-release/nozomi-networks-extends-partnership-with-yokogawa"
+      ]
+    },
+    {
+      "provider": "Xage Security",
+      "partnership_type": "Strategic partnership (APAC focus)",
+      "service_tags": [
+        "Zero-trust remote access"
+      ],
+      "marketed_solution": "Zero Trust access for autonomous industrial operations",
+      "sources": [
+        "https://xage.com/blog/yokogawa-partnership/"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+automation_company,security_provider,service_tag,marketed_solution
+Yokogawa,Dragos,Asset inventory,Integration with CENTUM VP DCS; joint OT services
+Yokogawa,Dragos,IR/Playbooks,Integration with CENTUM VP DCS; joint OT services
+Yokogawa,Dragos,OT monitoring/detection,Integration with CENTUM VP DCS; joint OT services
+Yokogawa,Dragos,Vulnerability management,Integration with CENTUM VP DCS; joint OT services
+Yokogawa,Nozomi Networks,OT monitoring/detection,Included in Yokogawa OpreX Managed Services; standalone resale
+Yokogawa,Xage Security,Zero-trust remote access,Zero Trust access for autonomous industrial operations
+Siemens Energy,Tenable,Asset inventory,Integrated into Omnivise T3000 control system
+Siemens Energy,Tenable,NIDS,Integrated into Omnivise T3000 control system
+Siemens Energy,Tenable,Vulnerability management,Integrated into Omnivise T3000 control system
+Siemens,Fortinet,Network security/segmentation,FortiGate VM on Siemens RUGGEDCOM/APE platform
+Honeywell,Nozomi Networks,OT monitoring/detection,Honeywell Forge Cybersecurity+ with Nozomi
+Emerson,Dragos,OT monitoring/detection,Ovation Power & Water Cybersecurity Suite; validated on DeltaV
+Emerson,Nozomi Networks,OT monitoring/detection,Offered via Emerson Power and Water Cybersecurity suite
+ABB,Microsoft (Azure/Defender ecosystem),(unspecified),ABB Ability platform on Azure; security whitepaper with Microsoft/NXP
+GE (Digital/Power/Vernova),Nozomi Networks,OT monitoring/detection,GE Power customer deployments; Proficy integration by partners

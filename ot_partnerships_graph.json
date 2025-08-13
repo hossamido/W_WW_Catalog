@@ -1,0 +1,317 @@
+{
+  "Yokogawa": [
+    {
+      "provider": "Dragos",
+      "partnership_type": "Global partnership; technology & services integration",
+      "services_offered": [
+        "OT visibility, asset/vuln discovery, threat detection, IR playbooks",
+        "global OT services"
+      ],
+      "marketed_solution": "Integration with CENTUM VP DCS; joint OT services",
+      "sectors": "Process industries incl. water & wastewater",
+      "sources": [
+        "https://www.dragos.com/resources/press-release/dragos-and-yokogawa-forge-global-partnership-to-strengthen-cybersecurity-for-industrial-systems-worldwide/"
+      ]
+    },
+    {
+      "provider": "Nozomi Networks",
+      "partnership_type": "MSSP/resell & services partnership (extended)",
+      "services_offered": [
+        "OT/IoT visibility, network monitoring, threat detection"
+      ],
+      "marketed_solution": "Included in Yokogawa OpreX Managed Services; standalone resale",
+      "sectors": "Global; water/utilities among focus verticals",
+      "sources": [
+        "https://www.nozominetworks.com/press-release/nozomi-networks-extends-partnership-with-yokogawa"
+      ]
+    },
+    {
+      "provider": "Xage Security",
+      "partnership_type": "Strategic partnership (APAC focus)",
+      "services_offered": [
+        "Zero Trust remote access, policy enforcement, secure data exchange"
+      ],
+      "marketed_solution": "Zero Trust access for autonomous industrial operations",
+      "sectors": "APAC; applicable to water/utilities",
+      "sources": [
+        "https://xage.com/blog/yokogawa-partnership/"
+      ]
+    },
+    {
+      "provider": "Claroty",
+      "partnership_type": "Reseller & services (EMEA/APAC)",
+      "services_offered": [
+        "OT security platform (visibility, detection, risk mgmt)"
+      ],
+      "marketed_solution": "Resell & services for process industries",
+      "sectors": "EMEA/APAC",
+      "sources": [
+        "https://claroty.com/press-releases/claroty-and-yokogawa-engineering-asia-partner-to-secure-process-operations"
+      ]
+    }
+  ],
+  "Siemens Energy": [
+    {
+      "provider": "Tenable",
+      "partnership_type": "Expanded collaboration; product integration",
+      "services_offered": [
+        "Asset discovery, vulnerability mgmt, NIDS for OT"
+      ],
+      "marketed_solution": "Integrated into Omnivise T3000 control system",
+      "sectors": "Power; applicable to utilities",
+      "sources": [
+        "https://www.tenable.com/press-releases/tenable-and-siemens-energy-expand-collaboration-on-ot-cybersecurity"
+      ]
+    }
+  ],
+  "Siemens": [
+    {
+      "provider": "Zscaler",
+      "partnership_type": "Integrated zero-trust access for OT/IT",
+      "services_offered": [
+        "Zero Trust Network Access (ZPA) for OT"
+      ],
+      "marketed_solution": "ZPA for OT + Siemens SCALANCE LPE",
+      "sectors": "Manufacturing & critical infrastructure",
+      "sources": [
+        "https://www.zscaler.com/press/zscaler-and-siemens-partnership-delivers-all-one-solution-accelerate-secure-digitalization-ot"
+      ]
+    },
+    {
+      "provider": "Fortinet",
+      "partnership_type": "Technology alliance",
+      "services_offered": [
+        "Firewalling/IPS, segmentation, secure connectivity at edge"
+      ],
+      "marketed_solution": "FortiGate VM on Siemens RUGGEDCOM/APE platform",
+      "sectors": "Industrial/critical infrastructure incl. utilities",
+      "sources": [
+        "https://www.fortinet.com/content/dam/fortinet/assets/alliances/2019/sb-fortinet-alliances-siemens.pdf"
+      ]
+    },
+    {
+      "provider": "Darktrace",
+      "partnership_type": "Strategic partnership",
+      "services_offered": [
+        "AI-driven OT anomaly/threat detection"
+      ],
+      "marketed_solution": "Siemens OT cyber services + Darktrace DETECT/RESPOND",
+      "sectors": "Energy & manufacturing",
+      "sources": [
+        "https://www.darktrace.com/news/darktrace-enters-into-strategic-cyber-security-partnership-with-siemens"
+      ]
+    },
+    {
+      "provider": "ServiceNow",
+      "partnership_type": "Strategic collaboration",
+      "services_offered": [
+        "Industrial vuln mgmt workflows, shopfloor security ops automation"
+      ],
+      "marketed_solution": "SINEC Security Guard + Industrial Copilot integrated with Now Platform",
+      "sectors": "Manufacturing",
+      "sources": [
+        "https://press.siemens.com/global/en/pressrelease/siemens-and-servicenow-strengthen-shopfloor-security-and-drive-generative-ai-powered"
+      ]
+    }
+  ],
+  "Honeywell": [
+    {
+      "provider": "Nozomi Networks",
+      "partnership_type": "Cybersecurity partnership",
+      "services_offered": [
+        "OT/IoT visibility & monitoring combined with Honeywell Forge services"
+      ],
+      "marketed_solution": "Honeywell Forge Cybersecurity+ with Nozomi",
+      "sectors": "Industrial & critical infrastructure incl. utilities",
+      "sources": [
+        "https://www.honeywell.com/us/en/press/2020/11/honeywell-and-nozomi-networks-announce-partnership-to-significantly-strengthen-operational-technology-cybersecurity"
+      ]
+    },
+    {
+      "provider": "Fortinet",
+      "partnership_type": "Strategic alliance (portfolio enhancement)",
+      "services_offered": [
+        "Secure networking & OT security integration"
+      ],
+      "marketed_solution": "Integrated with Honeywell OT cybersecurity offerings",
+      "sectors": "Critical infrastructure",
+      "sources": [
+        "https://www.honeywell.com/us/en/company/partners"
+      ]
+    },
+    {
+      "provider": "SCADAfence",
+      "partnership_type": "Acquisition (integrated into Forge suite)",
+      "services_offered": [
+        "OT network monitoring, threat detection, vuln mgmt"
+      ],
+      "marketed_solution": "SCADAfence integrated into Honeywell Forge Cybersecurity+",
+      "sectors": "Industrial/critical infrastructure",
+      "sources": [
+        "https://www.honeywell.com/us/en/press/2023/07/honeywell-to-acquire-scadafence-strengthening-its-cybersecurity-software-portfolio"
+      ]
+    }
+  ],
+  "Rockwell Automation": [
+    {
+      "provider": "Dragos",
+      "partnership_type": "Technology & services partnership",
+      "services_offered": [
+        "ICS/OT threat detection, IR retainers, MDR services via partner"
+      ],
+      "marketed_solution": "Threat Detection Services featuring Dragos Platform",
+      "sectors": "Manufacturing & other OT verticals",
+      "sources": [
+        "https://www.rockwellautomation.com/en-us/company/news/press-releases/Rockwell-Automation-Partners-with-Dragos-to-Enable-and-Empower-Manufacturers-with-Threat-Detection-Services.html"
+      ]
+    },
+    {
+      "provider": "Claroty",
+      "partnership_type": "Technology & services partnership",
+      "services_offered": [
+        "OT visibility & threat detection",
+        "resilience services"
+      ],
+      "marketed_solution": "Rockwell + Claroty OT Cybersecurity Resilience",
+      "sectors": "Manufacturing & critical infrastructure",
+      "sources": [
+        "https://www.rockwellautomation.com/en-us/capabilities/industrial-cybersecurity/rockwell-automation-claroty-cybersecurity-resilience.html"
+      ]
+    },
+    {
+      "provider": "CrowdStrike",
+      "partnership_type": "Endpoint protection services partnership",
+      "services_offered": [
+        "EPP/EDR for engineering workstations/servers",
+        "managed services"
+      ],
+      "marketed_solution": "Rockwell Endpoint Protection Services (with CrowdStrike Falcon)",
+      "sectors": "Manufacturing",
+      "sources": [
+        "https://www.rockwellautomation.com/en-us/company/news/press-releases/Rockwell-Automation-Offers-Comprehensive-Endpoint-Protection-Services.html"
+      ]
+    },
+    {
+      "provider": "Oylo (acquired)",
+      "partnership_type": "Acquisition (MSSP/IR)",
+      "services_offered": [
+        "Assessments, turnkey implementations, managed services, incident response"
+      ],
+      "marketed_solution": "Rockwell Industrial Cybersecurity Services (via Oylo)",
+      "sectors": "Global industrials",
+      "sources": [
+        "https://www.rockwellautomation.com/en-au/company/news/press-releases/company/rockwell-automation-acquires-cybersecurity-company.html"
+      ]
+    }
+  ],
+  "Emerson": [
+    {
+      "provider": "Dragos",
+      "partnership_type": "Expanded global agreement",
+      "services_offered": [
+        "ICS threat detection integrated to DCS",
+        "services for power/water"
+      ],
+      "marketed_solution": "Ovation Power & Water Cybersecurity Suite; validated on DeltaV",
+      "sectors": "Power & water utilities, process industries",
+      "sources": [
+        "https://www.emerson.com/en-us/news/automation/1907-dragos"
+      ]
+    },
+    {
+      "provider": "Nozomi Networks",
+      "partnership_type": "Expanded partnership",
+      "services_offered": [
+        "OT/IoT visibility & threat detection"
+      ],
+      "marketed_solution": "Offered via Emerson Power and Water Cybersecurity suite",
+      "sectors": "Power & water utilities",
+      "sources": [
+        "https://www.nozominetworks.com/press-release/emerson-and-nozomi-networks-extend-relationship-to-help-secure-critical-power-and-water-processes-worldwide"
+      ]
+    }
+  ],
+  "Schneider Electric": [
+    {
+      "provider": "Claroty",
+      "partnership_type": "Strategic partnership",
+      "services_offered": [
+        "OT visibility & anomaly detection"
+      ],
+      "marketed_solution": "EcoStruxure integrations; Claroty platform for Schneider customers",
+      "sectors": "Industrial & critical infrastructure",
+      "sources": [
+        "https://claroty.com/press-releases/schneider-electric-and-claroty-partner-to-address-safety-and-cybersecurity-challenges-in-global-industrial-infrastructure"
+      ]
+    },
+    {
+      "provider": "Nozomi Networks",
+      "partnership_type": "Global partnership & MSSP Elite",
+      "services_offered": [
+        "OT/IoT visibility, anomaly detection",
+        "managed services"
+      ],
+      "marketed_solution": "SCADAguardian / Nozomi Arc; Schneider RTUs embedded sensor (2025)",
+      "sectors": "Energy & critical infrastructure",
+      "sources": [
+        "https://www.nozominetworks.com/press-release/schneider-electric-partners-with-nozomi-networks-to-secure-and-protect-critical-infrastructure",
+        "https://www.prnewswire.com/news-releases/nozomi-networks-welcomes-schneider-electric-to-its-mssp-elite-partner-program-to-deliver-advanced-managed-security-services-worldwide-302374516.html",
+        "https://www.prnewswire.com/news-releases/nozomi-networks-and-schneider-electric-deliver-worlds-first-security-sensor-embedded-in-remote-terminal-units-302528631.html"
+      ]
+    }
+  ],
+  "ABB": [
+    {
+      "provider": "Nozomi Networks",
+      "partnership_type": "Global partnership",
+      "services_offered": [
+        "OT/IoT visibility & threat detection"
+      ],
+      "marketed_solution": "Integrated with ABB Ability cybersecurity services",
+      "sectors": "Energy, process & hybrid industries",
+      "sources": [
+        "https://www.nozominetworks.com/press-release/abb-joins-forces-with-nozomi-networks-to-strengthen-the-cybersecurity-of-industrial-infrastructure-worldwide"
+      ]
+    },
+    {
+      "provider": "Microsoft (Azure/Defender ecosystem)",
+      "partnership_type": "Strategic collaboration",
+      "services_offered": [
+        "Cloud + AI + security for industrial operations"
+      ],
+      "marketed_solution": "ABB Ability platform on Azure; security whitepaper with Microsoft/NXP",
+      "sectors": "Industrial & utilities",
+      "sources": [
+        "https://azure.microsoft.com/mediahandler/files/resourcefiles/-a-solution-for-360-degree-industrial-internet-security/ABB-MSFT-NXP_Cybersecurity%20Whitepaper_2021.pdf"
+      ]
+    }
+  ],
+  "GE (Digital/Power/Vernova)": [
+    {
+      "provider": "Nozomi Networks",
+      "partnership_type": "Global partnership",
+      "services_offered": [
+        "OT visibility & real-time monitoring"
+      ],
+      "marketed_solution": "GE Power customer deployments; Proficy integration by partners",
+      "sectors": "Energy & critical infrastructure; applicable to water",
+      "sources": [
+        "https://www.nozominetworks.com/press-release/ge-and-nozomi-networks-to-enhance-cyber-security-for-energy-and-industrial-operators-worldwide"
+      ]
+    }
+  ],
+  "Mitsubishi Electric (ICONICS)": [
+    {
+      "provider": "Dispel",
+      "partnership_type": "e-F@ctory Alliance partnership",
+      "services_offered": [
+        "Zero Trust remote access (MTD), secure vendor access"
+      ],
+      "marketed_solution": "e-F@ctory + Dispel ZTNA for industrial",
+      "sectors": "Manufacturing & infrastructure",
+      "sources": [
+        "https://mitsubishisolutions.com/bridging-the-it-ot-security-gap/"
+      ]
+    }
+  ]
+}
