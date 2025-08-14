@@ -8,6 +8,7 @@ import streamlit.components.v1 as components
 WATER_DATA_PATH = 'Water_Utilities-focused_partnerships.csv'
 ALL_DATA_PATH = 'ot_partnerships_relations.csv'
 SERVICE_DATA_PATH = 'service_to_pera_and_regs.csv'
+GLOSSARY_DATA_PATH = 'OT_Cyber_Acronym_Glossary.csv'
 
 @st.cache_data
 def load_data(file_path, is_water_data=False):
@@ -58,6 +59,22 @@ def load_service_data(file_path):
         st.stop()
     return None
 
+@st.cache_data
+def load_glossary_data(file_path):
+    """
+    Loads and caches the glossary data from the CSV file.
+    """
+    try:
+        df = pd.read_csv(file_path)
+        df.fillna('Not specified', inplace=True)
+        return df
+    except FileNotFoundError:
+        st.error(f"Error: The file was not found at {file_path}")
+        st.stop()
+    except Exception as e:
+        st.error(f"An error occurred while loading the glossary: {e}")
+        st.stop()
+
 def create_partnership_graph(df, central_node_name, filter_type):
     """Generates an interactive network graph of partnerships."""
     # Initialize the graph with a light background
@@ -106,7 +123,7 @@ def create_partnership_graph(df, central_node_name, filter_type):
 
 def create_full_bipartite_graph(df):
     """Generates an interactive bipartite-style network graph for the entire dataset."""
-    net = Network(height='300px', width='400px', bgcolor='#f0f2f6', font_color='black', notebook=True, cdn_resources='in_line', directed=False)
+    net = Network(height='600px', width='100%', bgcolor='#f0f2f6', font_color='black', notebook=True, cdn_resources='in_line', directed=False)
 
     # Set physics for a force-directed layout which works well for bipartite graphs
     net.set_options("""
@@ -159,7 +176,7 @@ st.sidebar.markdown("### Created by: **Ahmed Hemida**")
 st.sidebar.markdown("On Aug 13, 2025")
 explorer_choice = st.sidebar.radio(
     "Select an explorer:",
-    ('Partnerships', 'Security Services')
+    ('Partnerships', 'Security Services', 'Glossary')
 )
 
 if explorer_choice == 'Partnerships':
@@ -259,3 +276,35 @@ elif explorer_choice == 'Security Services':
         with st.container(border=True):
             st.subheader("Regulation / Guidance Alignment")
             st.markdown(service_details['Regulation / guidance alignment'])
+
+elif explorer_choice == 'Glossary':
+    # --- Glossary Explorer Logic ---
+    st.title("OT Cybersecurity Glossary")
+    st.markdown("Search for common acronyms used in the OT/ICS cybersecurity space. The full list is also available for browsing below.")
+    
+    glossary_df = load_glossary_data(GLOSSARY_DATA_PATH)
+    
+    st.sidebar.header("Glossary Search")
+    search_term = st.sidebar.text_input("Enter an acronym to search for:").strip().upper()
+    
+    # Display search result if a term is entered
+    if search_term:
+        # Case-insensitive search
+        result_df = glossary_df[glossary_df['Acronym'].str.upper() == search_term]
+        
+        if not result_df.empty:
+            result = result_df.iloc[0]
+            st.header(f"Search Result for: `{result['Acronym']}`")
+            with st.container(border=True):
+                st.subheader("Full Name")
+                st.markdown(f"**{result['Full Name']}**")
+                st.subheader("Definition")
+                st.markdown(result['Short Definition'])
+            st.divider()
+        else:
+            st.warning(f"Acronym '{search_term}' not found in the glossary.")
+            st.divider()
+
+    # Always display the full glossary table
+    st.header("Full Glossary")
+    st.dataframe(glossary_df, use_container_width=True)
