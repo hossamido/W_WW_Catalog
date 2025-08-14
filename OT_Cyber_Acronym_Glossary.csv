@@ -1,0 +1,43 @@
+Acronym,Full Name,Short Definition
+AD,Active Directory,"Microsoft directory service for identities, groups, and policies."
+API,Application Programming Interface,Programmatic interface; abused in 'Execution through API' (T0871).
+ATT&CK,"Adversarial Tactics, Techniques, & Common Knowledge",MITRE framework cataloging adversary behaviors (incl. ICS).
+AWWA,American Water Works Association,Publishes water-sector security guidance and best practices.
+CISA,Cybersecurity and Infrastructure Security Agency,US agency issuing ICS advisories and sector guidance.
+DCS,Distributed Control System,Process control platform; peers to PLC/SCADA.
+DEC (NY DEC),New York State Department of Environmental Conservation,Proposed wastewater cybersecurity rules affecting POTWs/SPDES.
+DMZ,Demilitarized Zone,Isolated segment between IT and OT (jump/broker zone).
+EDR,Endpoint Detection and Response,Managed endpoint telemetry/detection on laptops/servers.
+EPA,Environmental Protection Agency,US regulator for public water systems; sector guidance.
+ERP,Emergency Response Plan,Plan for incidents/emergencies; should include cyber IR.
+FBI,Federal Bureau of Investigation,Co-author of water-sector cyber advisories with CISA/EPA.
+GUI,Graphical User Interface,Operator/engineering screens; HMI/GUI Takeover (T0823).
+HMI,Human-Machine Interface,Operator station for viewing/controlling process.
+ICS,Industrial Control System,Umbrella term for SCADA/DCS/PLC control environments.
+IEC/ISA 62443,Industrial Automation & Control Systems Security,Standards for zoning/conduits and ICS security practices.
+IED,Intelligent Electronic Device,"Field device (e.g., protective relay) with comms/logic."
+IR,Incident Response,Processes for handling and learning from cyber events.
+IRP,Incident Response Plan,"Documented playbooks, roles, and communications for cyber IR."
+IT,Information Technology,"Corporate/business network (email, AD, file servers)."
+MFA,Multi-Factor Authentication,Two-step auth; critical for remote access and jump hosts.
+MITRE ICS IDs,"Technique & Tactic Codes (e.g., T0822, TA0106)",ATT&CK identifiers for ICS techniques/tactics.
+MSSP,Managed Security Service Provider,Third-party monitoring/response; MSSP-Lite for small utilities.
+NIST SP 800-82,Guide to Operational Technology (OT) Security,Foundational US guidance for securing OT/ICS.
+OT,Operational Technology,"Industrial/process networks and assets (SCADA, PLCs, field)."
+OPC UA,Open Platform Communications Unified Architecture,"Standard for secure, modeled data exchange in OT."
+PID,Proportional–Integral–Derivative (Control),Common feedback control algorithm in PLC/DCS loops.
+PLC,Programmable Logic Controller,Rugged controller running ladder/FBD code for machinery/process.
+POTW,Publicly Owned Treatment Works,Municipal wastewater utilities; subject to state/federal rules.
+PREA,"Perimeter/Remote, Enterprise IT, Access (Bridge), OT/Devices",Layered model we used to map IT↔OT attack paths.
+RBAC,Role-Based Access Control,Least-privilege model assigning permissions by role.
+RDP,Remote Desktop Protocol,Microsoft remote access; broker via DMZ/jump hosts.
+RTU,Remote Terminal Unit,Field controller/telemetry node in water distribution.
+SCADA,Supervisory Control and Data Acquisition,Telemetry + central control architecture for industrial ops.
+SIEM,Security Information and Event Management,Centralized log collection/correlation/alerting.
+SIS,Safety Instrumented System,Independent protection layer for safety trips/shutdowns.
+SPDES,State Pollutant Discharge Elimination System,NY permit program; proposed cyber requirements for POTWs.
+SSH,Secure Shell,"Secure remote admin; use keys/MFA, restrict in OT."
+TLS,Transport Layer Security,"Crypto protocol for secure communications (e.g., OPC UA/TLS)."
+TTPs,"Tactics, Techniques, and Procedures",Adversary behavior patterns (mapped via ATT&CK).
+VNC,Virtual Network Computing,Remote screen sharing; restrict or broker through jump hosts.
+VPN,Virtual Private Network,"Encrypted tunnel; pair with MFA, device management, logging."
